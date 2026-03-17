@@ -59,34 +59,58 @@ TRUNCATE(precio, 0) as 'precio truncado'
 From producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
-
+Select 
+codigo_fabricante
+From producto;
 
 -- 12. Llista el codi dels fabricants que tenen productes en la taula producto, eliminant els codis que apareixen repetits.
-
+Select 
+DISTINCT codigo_fabricante
+From producto;
 
 -- 13. Llista els noms dels fabricants ordenats de manera ascendent
-
+Select *
+From fabricante
+Order by nombre ASC;
 
 -- 14. Llista els noms dels fabricants ordenats de manera descendent
-
+Select *
+From fabricante
+Order by nombre DESC;
 
 -- 15. Llista els noms i els preus dels productes ordenats, en primer lloc, pel nom de manera ascendent i, en segon lloc, pel preu de manera descendent.
-
+Select 
+	nombre,
+    precio
+From producto
+Order by nombre ASC, precio DESC;
 
 -- 16. Retorna una llista amb les 5 primeres files de la taula fabricante.
-
+Select *
+From fabricante
+LIMIT 5;
 
 -- 17. Retorna una llista amb 2 files a partir de la quarta fila de la taula fabricante. La quarta fila també s'ha d'incloure en la resposta.
-
+Select *
+From fabricante
+LIMIT 3, 3;
 
 -- 18. Llista el nom i el preu del producte més barat. (Utilitza solament les clàusules ORDER BY i LIMIT).
-
+Select *
+From producto
+order by precio 
+LIMIT 1;
 
 -- 19. Llista el nom i el preu del producte més car. (Utilitza solament les clàusules ORDER BY i LIMIT).
-
+Select *
+From producto
+order by precio DESC
+LIMIT 1;
 
 -- 20. Llista el nom de tots els productes del fabricant el codi de fabricant del qual és igual a 2.
-
+Select *
+From producto
+where codigo_fabricante = 2
 
 -- 21. Retorna una llista amb el nom del producte, preu i nom de fabricant (nombre del fabricante) de tots els productes de la base de dades.
 
