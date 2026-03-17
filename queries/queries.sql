@@ -29,19 +29,34 @@ Select
 From producto;
 
 -- 6. Llista els noms (nombre) i els preus de tots els productes de la taula producto, convertint els noms a majúscula.
-
+Select 
+ UPPER(nombre) as 'Nombre del producto',
+    precio as euros
+From producto;
 
 -- 7. Llista els noms (nombre) i els preus (precio) dels productes de la taula producto, convertint els noms a minúscula.
-
+Select 
+ LOWER(nombre) as 'Nombre del producto',
+    precio as euros
+From producto;
 
 -- 8. Llista el nom de tots els fabricants en una columna, i en una altra columna obtingui en majúscules els dos primers caràcters del nom del fabricant (iniciales).
-
+Select 
+nombre,
+UPPER(LEFT(nombre, 2)) as 'iniciales fabricante'
+From fabricante;
 
 -- 9. Llista els noms i els preus dels productes, arrodonint el valor del preu (precio)
-
+Select 
+nombre as Nombre,
+ROUND(precio) as 'Precio redondeado'
+From producto;
 
 -- 10. Llista els noms i els preus de tots els productes (precio truncado) de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
-
+Select 
+nombre as Nombre,
+TRUNCATE(precio, 0) as 'Precio truncado'
+From producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
 
