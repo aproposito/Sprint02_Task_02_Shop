@@ -125,12 +125,12 @@ LIMIT 1;
 Select 
 	nombre
 From producto
-where codigo_fabricante = 2
+where codigo_fabricante = 2;
 
 -- 21. Retorna una llista amb el nom del producte, preu i nom de fabricant (nombre del fabricante) de tots els productes de la base de dades.
 Select 
 	p.nombre,
-	precio,
+	p.precio,
     f.nombre as 'nombre del fabricante' 
 From producto p
 JOIN fabricante f 
@@ -138,7 +138,7 @@ JOIN fabricante f
 
 -- 22. Llista tots els productes amb nom, preu i nom del fabricant (nombre del fabricante) ordenats alfabèticament.
 	p.nombre,
-	precio,
+	p.precio,
     f.nombre as 'nombre del fabricante' 
 From producto p
 JOIN fabricante f 
@@ -160,7 +160,7 @@ ORDER by nombre ASC;
 Select 
 	p.nombre,
     p.precio,
-    f.nombre as 'fabricante' 
+    f.nombre as 'fabricant' 
 From producto p
 JOIN fabricante f 
 	on f.codigo = p.codigo_fabricante
