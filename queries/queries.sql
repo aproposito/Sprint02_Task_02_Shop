@@ -144,7 +144,7 @@ Select
 From producto p
 JOIN fabricante f 
 	on f.codigo = p.codigo_fabricante
-ORDER by nombre ASC;
+ORDER by f.nombre ASC;
 
 -- 23. Retorna una llista amb el codi del producte, nom del producte, codi del fabricant (codigo fabricante) i nom del fabricant (nombre fabricante), de tots els productes de la base de dades.
 Select 
@@ -154,8 +154,7 @@ Select
     f.nombre as 'nombre fabricante' 
 From producto p
 JOIN fabricante f 
-	on f.codigo = p.codigo_fabricante
-ORDER by p.nombre ASC;
+	on f.codigo = p.codigo_fabricante;
 
 -- 24. Retorna el nom, el preu i el nom del fabricant (fabricante), del producte més barat.
 Select 
