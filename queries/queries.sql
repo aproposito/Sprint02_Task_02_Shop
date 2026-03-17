@@ -91,24 +91,31 @@ From fabricante
 LIMIT 5;
 
 -- 17. Retorna una llista amb 2 files a partir de la quarta fila de la taula fabricante. La quarta fila també s'ha d'incloure en la resposta.
-Select *
+Select 
+	codigo,
+	nombre
 From fabricante
 LIMIT 3, 3;
 
 -- 18. Llista el nom i el preu del producte més barat. (Utilitza solament les clàusules ORDER BY i LIMIT).
-Select *
+Select 
+	nombre,
+	precio
 From producto
 order by precio 
 LIMIT 1;
 
 -- 19. Llista el nom i el preu del producte més car. (Utilitza solament les clàusules ORDER BY i LIMIT).
-Select *
+Select 
+	nombre,
+	precio
 From producto
 order by precio DESC
 LIMIT 1;
 
 -- 20. Llista el nom de tots els productes del fabricant el codi de fabricant del qual és igual a 2.
-Select *
+Select 
+	nombre
 From producto
 where codigo_fabricante = 2
 
