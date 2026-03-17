@@ -137,6 +137,7 @@ JOIN fabricante f
 	on f.codigo = p.codigo_fabricante; 
 
 -- 22. Llista tots els productes amb nom, preu i nom del fabricant (nombre del fabricante) ordenats alfabèticament.
+Select
 	p.nombre,
 	p.precio,
     f.nombre as 'nombre del fabricante' 
