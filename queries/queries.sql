@@ -155,7 +155,7 @@ Select
 From producto p
 JOIN fabricante f 
 	on f.codigo = p.codigo_fabricante
-ORDER by nombre ASC;
+ORDER by p.nombre ASC;
 
 -- 24. Retorna el nom, el preu i el nom del fabricant (fabricante), del producte més barat.
 Select 
