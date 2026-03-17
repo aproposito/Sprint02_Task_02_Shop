@@ -73,12 +73,14 @@ DISTINCT codigo_fabricante
 From producto;
 
 -- 13. Llista els noms dels fabricants ordenats de manera ascendent
-Select *
+Select 
+	nombre
 From fabricante
 Order by nombre ASC;
 
 -- 14. Llista els noms dels fabricants ordenats de manera descendent
-Select *
+Select 
+	nombre
 From fabricante
 Order by nombre DESC;
 
@@ -90,7 +92,9 @@ From producto
 Order by nombre ASC, precio DESC;
 
 -- 16. Retorna una llista amb les 5 primeres files de la taula fabricante.
-Select *
+Select 
+	codigo,
+	nombre
 From fabricante
 LIMIT 5;
 
@@ -99,7 +103,7 @@ Select
 	codigo,
 	nombre
 From fabricante
-LIMIT 3, 3;
+LIMIT 3, 2;
 
 -- 18. Llista el nom i el preu del producte més barat. (Utilitza solament les clàusules ORDER BY i LIMIT).
 Select 
