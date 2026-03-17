@@ -18,44 +18,44 @@ From producto;
 SELECT	
   nombre,
     precio as precio_eur,
-    precio * 1 as precio_us_dolar
+    precio * 1 as precio_usd
 From producto;
 
 -- 5. Llista el nom dels productes, el preu en euros i el preu en dòlars estatunidencs (amb un tipus de canvi de 1 € = 1,1 $ i arrodonint el resultat a dues xifres decimals). Utilitza els següents àlies per a les columnes: nom del producte, euros, dòlars.
 Select 
-	nombre as 'nombre del producto',
+	nombre as 'nom del producte',
     precio as euros,
-    Round (precio * 1.1) as dólares
+    Round (precio * 1.1, 2) as 'dòlars'
 From producto;
 
 -- 6. Llista els noms (nombre) i els preus de tots els productes de la taula producto, convertint els noms a majúscula.
 Select 
- UPPER(nombre) as 'Nombre del producto',
-    precio as euros
+ UPPER(nombre) as 'nombre',
+    precio
 From producto;
 
 -- 7. Llista els noms (nombre) i els preus (precio) dels productes de la taula producto, convertint els noms a minúscula.
 Select 
- LOWER(nombre) as 'Nombre del producto',
-    precio as euros
+ LOWER(nombre) as 'nombre',
+    precio
 From producto;
 
 -- 8. Llista el nom de tots els fabricants en una columna, i en una altra columna obtingui en majúscules els dos primers caràcters del nom del fabricant (iniciales).
 Select 
 nombre,
-UPPER(LEFT(nombre, 2)) as 'iniciales fabricante'
+UPPER(LEFT(nombre, 2)) as 'iniciales'
 From fabricante;
 
 -- 9. Llista els noms i els preus dels productes, arrodonint el valor del preu (precio)
 Select 
-nombre as Nombre,
-ROUND(precio) as 'Precio redondeado'
+nombre,
+ROUND(precio) as 'precio'
 From producto;
 
 -- 10. Llista els noms i els preus de tots els productes (precio truncado) de la taula producto, truncant el valor del preu per a mostrar-lo sense cap xifra decimal.
 Select 
-nombre as Nombre,
-TRUNCATE(precio, 0) as 'Precio truncado'
+nombre as nombre,
+TRUNCATE(precio, 0) as 'precio truncado'
 From producto;
 
 -- 11. Mostra una llista amb els codis dels fabricants que apareixen a la taula producto, incloent possibles repeticions.
